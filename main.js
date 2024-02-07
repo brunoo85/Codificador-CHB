@@ -3,10 +3,10 @@ let descricao= document.getElementById("textoExplicacao");
 let imagemDescricao = document.getElementById("imgExplicacao");
 let texto = document.getElementById("textoInicio");
 let botaoCodificar= document.getElementById("btncodificar");
+let fraseCodificado = document.getElementById("frase_codificado");
 let codificado = document.getElementById("respostaCodigo");
 
 let textoExplicacao;
-
 
 function descricaoCodigo(button){
      switch(button.id){
@@ -339,38 +339,20 @@ botaoapertado.forEach(botao => {
 
 botaoCodificar.addEventListener("click", ()=>{
      let text = qualFuncao(respostaDoBotao);
-          // if(text!=compor){
-              let copy = function (e) {
-                    e.preventDefault();
-                    console.log('copy');
+          let copy = function (e) {
+               e.preventDefault();
                     
-                    if (e.clipboardData) {
-                        e.clipboardData.setData('text/plain', text);
+               if (e.clipboardData) {
+                    e.clipboardData.setData('text/plain', text);
                     } else if (window.clipboardData) {
                         window.clipboardData.setData('Text', text);
                     }
                 }
 
-                
-           console.log(text);
-           codificado.innerText= text;
-           window.addEventListener('copy', copy);
-           document.execCommand('copy');
-           window.removeEventListener('copy', copy);
-           console.log('ok 🐌');
-           
-          // }else{
-          //      var paraCompor = texto.value;
-          //      var aux = paraCompor.length;
-          //      var textAux = "";
-          
-          //      for (i=1; i<=aux; i++){
-          //          if (paraCompor.substring(i-1 , i) != " "  ){
-          //              textAux = textAux +  "\n" + paraCompor.substring(0,i) ;
-          //          }
-          //      }
-          //      codificado.innerText=textAux;
-          // }
+     codificado.innerText= text;
+     window.addEventListener('copy', copy);
+     document.execCommand('copy');
+     window.removeEventListener('copy', copy);
+     fraseCodificado.innerText = "Palavra/Frase codificada (copiada para a área de tranferência)";
          
-
 })

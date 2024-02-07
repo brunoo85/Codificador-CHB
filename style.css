@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 *{
      margin: 0;
      padding: 0;
@@ -17,6 +19,7 @@ body{
      /150px 150px 1fr;
 
      gap: 10px;
+     font-family:"Inter", sans-serif;
 }
 
 
@@ -25,7 +28,8 @@ header{
      display: grid;
      grid-template-columns: 70px auto ;
      justify-content: start; 
-     gap: 4rem;   
+     gap: 4rem;
+     font-weight: bold;   
 }
 
 img{
@@ -65,11 +69,13 @@ header{
      grid-template-columns: 1fr 1fr;
      margin-left: 1rem;
      gap: 10px;
+
 }
 
 .btn{
      border-radius: 20px;
      border: none;
+     font-family: "Inter", sans-serif;
 }
 
 .btncodigos{
@@ -121,6 +127,7 @@ header{
     padding: 7px;
      border-radius: 20px;
      min-height: 50px;
+     font-family: "Inter", sans-serif;
 }
 
 footer{

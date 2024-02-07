@@ -1,0 +1,134 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     background-color: #FFBE85;
+     display: grid;
+     grid: 
+     "header header header" 70px
+     "input input input" 70px
+     "codigo codigo detalhes" minmax(150px, 300px)
+     "codigo codigo codificado" minmax(150px, 250px)
+     " . . codificado" auto
+     "footer footer footer" 50px
+     /150px 150px 1fr;
+
+     gap: 10px;
+}
+
+
+header{
+     background-color: blueviolet;
+     display: grid;
+     grid-template-columns: 70px auto ;
+     justify-content: start; 
+     gap: 4rem;   
+}
+
+img{
+     height: 70px;
+     width: 70px;
+     margin-left: 1rem;
+}
+
+header >p{
+     align-self: center;
+     font-size: 24px;
+}
+
+header{
+     grid-area: header;
+}
+
+.entrada{
+     grid-area: input;
+     /* margin-left: 1rem;
+     margin-right: 1rem; */
+     margin: 0 1rem;
+}
+
+.entrada>input{
+     width: 70%;
+     font-size: 20px;
+     padding: 5px;
+     border-radius: 30px;
+     background-color: #FAF3F3;
+     border: 1px solid black;
+}
+
+.codigos{
+     grid-area: codigo;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     margin-left: 1rem;
+     gap: 10px;
+}
+
+.btn{
+     border-radius: 20px;
+     border: none;
+}
+
+.btncodigos{
+     font-size: 20px;
+}
+
+.explicacao{
+     grid-area: detalhes;
+     margin-right: 1rem;
+}
+
+.explicacao>h1{
+     margin-bottom: 10px;
+}
+
+#textoExplicacao{
+     background-color: #FAF3F3;
+     padding: 7px;
+     margin-bottom: 10px;
+     border-radius: 20px;
+     min-height: 200px;
+}
+
+.codificar{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.codificar>p{
+     align-self: center;
+     justify-self: center;
+     font-size: 18px;
+}
+
+.codificado{
+     grid-area: codificado;
+     margin-right: 1rem;
+}
+
+#btncodificar{
+     margin: 10px 0;
+     padding: 8px;
+     background-color:#56CBF9;
+     font-size: 20px;
+}
+
+.codificado >div{
+      background-color: #FAF3F3;
+    padding: 7px;
+     border-radius: 20px;
+     min-height: 50px;
+}
+
+footer{
+     border-top: 1px solid black;
+     padding: 10px;
+     grid-area: footer;
+     margin: 0 1rem;
+    
+}
+
+

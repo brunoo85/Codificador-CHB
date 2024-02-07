@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <title>Decodificador CHB</title>
+</head>
+<body>
+
+     <header>
+          <img src="assets/logoChb.png" alt="logo chb-rn">
+          <p>Decodificador CHB</p>
+     </header>
+
+     <section class="entrada" >
+          <h3>Palavra ou frase que vai ser codificada</h3>
+          <input type="text" id="textoInicio">
+     </section>
+
+     <section class="codigos">
+          <button id="emojiglota" class="btn btncodigos">Emojiglota</button>
+          <button id="compor" class="btn btncodigos">Compor</button>
+          <button id="runas" class="btn btncodigos">Runas</button>
+          <button id="decompor" class="btn btncodigos">Decompor</button>
+          <button id="erotes" class="btn btncodigos">Erotes</button>
+          <button id="t9" class="btn btncodigos">T9</button>
+          <button id="gaderi" class="btn btncodigos">Gaderi Poluty</button>
+          <button id="tnao9" class="btn btncodigos">Tnão9</button>
+     </section>
+
+     <section class="explicacao">
+          <h3>Explicação do código aplicado</h3>
+          <div id="textoExplicacao">
+          </div>
+
+          <div class="codificar">
+               <p>Aperte o botão para codificar:</p>
+               <button id="btncodificar" class="btn">Codificar</button>
+          </div>
+     </section>
+
+     <section class="codificado" >
+          <h3>Palavra/Frase codificada</h3>
+          <div id="respostaCodigo">
+          </div>
+     </section>
+
+     <footer>
+          <p>Projeto realizado por bruno mello a partir de uma ideia de fernanda figueiró e prototipada inicialmente por ela e por igor cesar.</p>
+     </footer>
+
+     <script src="main.js"></script>
+</body>
+</html>

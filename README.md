@@ -36,3 +36,7 @@ Assim que o site for aberto, ele terá essa interface inicial:
  Em seguida, clique em "Codificar", e o código aparecerá codificado no campo "Palavra/Frase codificada" (que terá a mensagem "copiado para sua área de transferência" acrescentada), como no exemplo abaixo:
 
   ![Codígo aparecendo](assets/conclusao.png)
+
+  Após isso, seu código já está copiado para ser usado. Caso use CTRL+V, o código será colado.
+
+  

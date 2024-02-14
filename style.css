@@ -22,6 +22,19 @@ body{
      font-family:"Inter", sans-serif;
 }
 
+body::-webkit-scrollbar {
+     width: 12px;               /* width of the entire scrollbar */
+   }
+   
+   body::-webkit-scrollbar-track {
+     background: orange;        /* color of the tracking area */
+   }
+   
+   body::-webkit-scrollbar-thumb {
+     background-color: rgb(111, 34, 183);    /* color of the scroll thumb */
+     border-radius: 20px;       /* roundness of the scroll thumb */
+   }
+
 
 header{
      background-color: blueviolet;
@@ -139,3 +152,36 @@ footer{
 }
 
 
+@media (max-width: 750px) {
+     body{
+          grid: 
+     "header " 70px
+     "input " 70px
+     "codigo " minmax(150px, 300px)
+     "codigo " minmax(150px, 250px)
+     " detalhes  " auto
+     "codificado" auto
+     "footer " 50px
+     /100vw;
+     
+          gap: 10px;
+     }
+
+     .entrada>input{
+          width: 90%;
+
+     }
+     .codigos{
+          grid-template-columns: 1fr 1fr;
+          margin-top: 1rem;
+          margin-right: 1rem;
+     }
+
+     .explicacao{
+          margin-left: 1rem;
+     }
+
+     .codificado{
+          margin-left: 1rem;
+     }
+}

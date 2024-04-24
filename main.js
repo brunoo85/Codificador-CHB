@@ -196,6 +196,7 @@ function t9() {
 
      num = num.replace( / /gi, " / ");
      num = num.replace( /a/gi, "2");
+     num = num.replace( /b/gi, "2");
      num = num.replace( /c/gi, "2");
      num = num.replace( /d/gi, "3");
      num = num.replace( /e/gi, "3");

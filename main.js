@@ -227,37 +227,51 @@ function t9() {
 
 function tnao9() {
                     
-     var num = texto.value.normalize('NFD').replace(/[\u0302-\u038f]/g, '');
+     let num = texto.value.normalize('NFD').replace(/[\u0302-\u038f]/g, '');
 
      num = num.replace( / /gi, " / ");
-     num = num.replace( /a/gi, "2");
-     num = num.replace( /b/gi, "22");
-     num = num.replace( /c/gi, "222");
-     num = num.replace( /d/gi, "3");
-     num = num.replace( /e/gi, "33");
-     num = num.replace( /f/gi, "333");
-     num = num.replace( /g/gi, "4");
-     num = num.replace( /h/gi, "44");
-     num = num.replace( /i/gi, "444");
-     num = num.replace( /j/gi, "5");
-     num = num.replace( /k/gi, "55");
-     num = num.replace( /l/gi, "555");
-     num = num.replace( /m/gi, "6");
-     num = num.replace( /n/gi, "66");
-     num = num.replace( /o/gi, "666");
-     num = num.replace( /p/gi, "7");
-     num = num.replace( /q/gi, "77");
-     num = num.replace( /r/gi, "777");
-     num = num.replace( /s/gi, "7777");
-     num = num.replace( /t/gi, "8");
-     num = num.replace( /u/gi, "88");
-     num = num.replace( /v/gi, "888");
-     num = num.replace( /w/gi, "9");
-     num = num.replace( /x/gi, "99");
-     num = num.replace( /y/gi, "999");
-     num = num.replace( /z/gi, "9999");
+     num = num.replace( /a/gi, "2.");
+     num = num.replace( /b/gi, "22.");
+     num = num.replace( /c/gi, "222.");
+     num = num.replace( /d/gi, "3.");
+     num = num.replace( /e/gi, "33.");
+     num = num.replace( /f/gi, "333.");
+     num = num.replace( /g/gi, "4.");
+     num = num.replace( /h/gi, "44.");
+     num = num.replace( /i/gi, "444.");
+     num = num.replace( /j/gi, "5.");
+     num = num.replace( /k/gi, "55.");
+     num = num.replace( /l/gi, "555.");
+     num = num.replace( /m/gi, "6.");
+     num = num.replace( /n/gi, "66.");
+     num = num.replace( /o/gi, "666.");
+     num = num.replace( /p/gi, "7.");
+     num = num.replace( /q/gi, "77.");
+     num = num.replace( /r/gi, "777.");
+     num = num.replace( /s/gi, "7777.");
+     num = num.replace( /t/gi, "8.");
+     num = num.replace( /u/gi, "88.");
+     num = num.replace( /v/gi, "888.");
+     num = num.replace( /w/gi, "9.");
+     num = num.replace( /x/gi, "99.");
+     num = num.replace( /y/gi, "999.");
+     num = num.replace( /z/gi, "9999.");
 
-     return num;
+     let ia; //i anterior
+     let ip; //i posterior
+     let newNumber=[]; //array nova
+
+     for(let i=0;i<num.length;i++){
+          ia = num[i-1];
+          ip = num[i+1];
+          if(num[i]==='.'&&ia!==ip){
+               newNumber[i]=ip;
+          }else{
+               newNumber[i]=num[i];
+          }
+     }
+
+     return newNumber.join('');
 }
 
 function erotes() {

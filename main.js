@@ -266,6 +266,7 @@ function tnao9() {
           ip = num[i+1];
           if(num[i]==='.'&&ia!==ip){
                newNumber[i]=ip;
+               i++;
           }else{
                newNumber[i]=num[i];
           }
